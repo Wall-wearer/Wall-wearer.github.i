@@ -1,6 +1,6 @@
 FROM bitnami/minideb:latest
 
-Label MAINTAINER Amir Pourmand
+LABEL MAINTAINER Amir Pourmand
 
 RUN apt-get update -y
 
@@ -17,7 +17,7 @@ ENV LC_ALL en_US.UTF-8
 RUN apt-get install --no-install-recommends ruby-full build-essential zlib1g-dev -y
 RUN apt-get install imagemagick -y
 
-# install python3 and jupyter
+# install python3 and jupyterg
 RUN apt-get install python3-pip -y
 RUN python3 -m pip install jupyter --break-system-packages
 
